@@ -2,11 +2,11 @@ def _():
 	global parametersFile
 	global sequenceFile
 	
-	import inspect
+	import os
 	from sys import argv
 	from os.path import isfile
 	
-	applicationDirectory = inspect.getfile( inspect.currentframe() )+"/../"
+	applicationDirectory = os.path.dirname(__file__) + os.path.sep
 	parametersFile = applicationDirectory+"config/parameters.py"
 	sequenceFile   = applicationDirectory+"config/sequenceELM327_CAN.py"
 	
